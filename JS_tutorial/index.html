@@ -15,6 +15,10 @@
     <h4>Object</h4><p id ="5"></p>
     <h4>Event</h4><p id="5"></p>
     <h4>String</h4><p id ="6"></p>
+    <h4>String Method</h4><p id ="7"></p>
+    <h4>Array</h4><p id ="8"></p>
+    <h4>Array Method</h4><p id ="9"></p> 
+    <h4>Array Soft</h4><p id ="10"></p>
     
     <!-- Xử lý function -->
     <script>
@@ -82,6 +86,43 @@
         const str2 = "Nha Trang"
         let wri = str1 + " " + str + " " + str2;
         document.getElementById("6").innerHTML = wri;
+    </script>
+
+    <!-- Xử lý String Method -->
+    <script>
+        let txt = "Moul Sàn";
+        let rep = txt.replace("Moul","moul");
+        let up = txt.toUpperCase();
+        let numtxt = txt.length;
+        document.getElementById("7").innerHTML=
+        txt + "<br>" + rep + "<br>" + up + "<br>" + numtxt;
+    </script>
+    <!-- Xử lý Array -->
+    <script>
+        const arr =["You", "Me","Our Children", "This contry", "This World"];
+        let num = arr.length;
+
+        let tx = "<ul>";
+        for (let i = 0; i <num; i++){
+            tx += "<li>" + arr[i] + "</li>";
+        }
+        tx += "</ul>";
+        document.getElementById("8").innerHTML = tx;
+    </script>
+    <!-- Xử lý Array method -->
+    <script>
+        const a = ["I", "Miss", "My", "Home", "And", "All old friends"];
+        let a = a.length;
+        let a = a.pop();
+        a.push("All is just memory ");
+        document.getElementById("9").innerHTML = a;
+    </script>
+    <!-- Xử lý Array Sort -->
+    <script>
+        const ar =["a","b","c","d"];
+        ar.sort();
+        ar.reverse();
+        document.getElementById("10").innerHTML = ar;
     </script>
 </body>
 </html>
