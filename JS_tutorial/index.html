@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<br lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js tutorial</title>
 </head>
-<body>
-    <h1 id = 'h1'></h1>
-    <h2 id ='img'>hình ảnh ở đây</h2>
+<br>
     <script src="helloword.js"></script>
     
-    <!--Output-->
-    <script>
-        document.getElementById("h1").innerHTML = "Hello Javascript";
-    </script>
-    <script >
-        document.write(5*5);
-    </script>
-    <script>
-        document.getElementById('img').innerHTML = '<img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">';
-    </script>
-    <div>
-        <button type="button" onclick="window.print();">Print</button>
-    </div>
+    <h1>Varialble</h1>
+    <script src="jsvarialble.js"></script>
     
+    <h2>Operation</h2>
+    <script src="jsoperation.js"></script>
 
-    <!--Varialbles-->
-    <script>
-        var tueDays = 28;
-        let month = 11;
-        const year = 2023;
-        let value = tueDays + '/' + month + '/' + year;
-        document.write(value);
+    <h3 >DataTypes</h3>
+    <p id = "data_object"></p>
+    <script>  
+    const message = {
+        firtsName: "Quách Thị Mai",
+        lastName: "Anh"
+    };
+    document.getElementById("data_object").innerHTML = message.firtsName + " " + message.lastName;
     </script>
-
-    
-
-
 </body>
 </html>
