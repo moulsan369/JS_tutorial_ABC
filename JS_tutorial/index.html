@@ -19,6 +19,9 @@
     <h4>Array</h4><p id ="8"></p>
     <h4>Array Method</h4><p id ="9"></p> 
     <h4>Array Soft</h4><p id ="10"></p>
+    <h4>Date</h4><p id ="11"></p>
+    <h4>Math</h4><p id ="12"></p>
+    <h4>Compair</h4><p id ="13"></p>
     
     <!-- Xử lý function -->
     <script>
@@ -124,5 +127,22 @@
         ar.reverse();
         document.getElementById("10").innerHTML = ar;
     </script>
+    <!-- Xử lý date -->
+    <script>
+        const d = new Date();
+        d.getFullYear(2023);
+        document.getElementById("11").innerHTML=d;
+    </script>
+    <!-- Xử lý Math -->
+    <script>
+        let b_ = Math.random(0,1);
+        document.getElementById("12").innerHTML =b_;
+    </script>
+    <!-- Xử lý Compairs -->
+     <script>
+        let woman = 18;
+        let confirm = (woman >= 18) ? "Can Marry" : "Can't Marry";
+        document.getElementById("13").innerHTML = confirm;
+     </script>
 </body>
 </html>
