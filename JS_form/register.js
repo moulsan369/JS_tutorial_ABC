@@ -6,12 +6,12 @@ const regiterBtn= document.getElementById('register-btn');
 const inputRegis= document.querySelectorAll('.input-reg');
 
 
-btnRegister.addEventListener('click', function () {
+regiterBtn.addEventListener('click', function () {
     let isValid = checkValidate();
 
-    if (isValid) {
+    if (isValid == true) {
         alert('Gửi đăng ký thành công');
-    }
+    } return false;
 });
 
 function checkValidate() {
@@ -19,34 +19,21 @@ function checkValidate() {
     let emailValue = userEmail.value;
     let phoneValue = userPhone.value;
 
-    let isCheck = true;
-
-    if (usernameValue == '') {
-        setError(userName, 'Tên không được để trống');
-        isCheck = false;
-    } else {
-        setSuccess(userName);
+    if (usernameValue == ''){
+        alert("Nhận tên");
+        return false;
     }
+    
 
-    if (emailValue == '') {
-        setError(userEmail, 'Email không được để trống');
-        isCheck = false;
-    } else if (!isEmail(emailValue)) {
-        setError(userEmail, 'Email không đúng định dạng');
-        isCheck = false;
-    } else {
-        setSuccess(userEmail);
+    if (emailValue == ''){
+        alert("Nhận email");
+        return false;
     }
+    
 
-    if (phoneValue == '') {
-        setError(userPhone, 'Số điện thoại không được để trống');
-        isCheck = false;
-    } else if (!isPhone(phoneValue)) {
-        setError(userPhone, 'Số điện thoại không đúng định dạng');
-        isCheck = false;
-    } else {
-        setSuccess(userPhone);
+    if (phoneValue == ''){
+        alert("Nhập Phone");
+        return false;    
     }
-
-    return isCheck;
+    
 }
