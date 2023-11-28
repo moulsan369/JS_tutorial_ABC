@@ -1,27 +1,86 @@
 <!DOCTYPE html>
-<br lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js tutorial</title>
-</head>
-<br>
     <script src="helloword.js"></script>
-    
-    <h1>Varialble</h1>
-    <script src="jsvarialble.js"></script>
-    
-    <h2>Operation</h2>
-    <script src="jsoperation.js"></script>
+</head>
+<body>
 
-    <h3 >DataTypes</h3>
-    <p id = "data_object"></p>
-    <script>  
-    const message = {
-        firtsName: "Quách Thị Mai",
-        lastName: "Anh"
-    };
-    document.getElementById("data_object").innerHTML = message.firtsName + " " + message.lastName;
+    <h5>Variable</h5>
+    <p id="1"></p>
+
+    <h5>Operation</h5>
+    <p id="2"></p>
+
+    <h5>DataTypes</h5>
+    <p id="3"></p>
+
+    <h5>Function</h5>
+    <p id="4"></p>
+
+    <h5>Object</h5>
+    <p id ="5"></p>
+
+    
+    
+    <!-- Xử lý function -->
+    <script>
+        function sum(a, b){
+            return a + b;
+        }        
     </script>
+
+    <!-- Xử lý variable -->
+    <script>
+        let name = 'Moul Sàn';
+        let age = 21;
+        let email = 'sanmoul@gmail.com';
+        let print = name + '<br>' + age + '<br>' + email;
+        document.getElementById("1").innerHTML = print;
+    </script>
+
+    <!-- Xử lý Operation -->
+    <script>
+        var a = 10, b = 11, c = 12, d = 14;
+        let sum = a + b;
+        let div = c / a;
+        document.getElementById("2").innerHTML = sum + '<br>' + div;
+    </script>
+
+
+    <!-- Xử lý DataTypes -->
+    <script>
+        const person = {
+            name: 'Mai Anh',
+            city: 'Di Linh',
+            age: 21
+        };
+        document.getElementById("3").innerHTML =
+        person.name + '<br>' + person.city + '<br>' + person.age;
+    </script>
+
+    <!-- Xử lý function call -->
+    <script>
+        let count = sum(10, 5);
+        document.getElementById("4").innerHTML = count;
+    </script>
+    
+    <!-- Xử lý Object -->
+    <script>
+        const ABCroom = {
+        numPeople : 20,
+        numMale : 15,
+        numFemale : 5,
+        numIntern : 4,
+        companyName : "ABC soft",
+    };
+    document.getElementById("5").innerHTML = 
+    ABCroom.companyName + "<br>" + ABCroom.numPeople + "<br>" 
+    + ABCroom.numMale + "<br>" + ABCroom.numFemale + "<br>" + ABCroom.numIntern + "<br>" + ABCroom;
+    </script>
+    
+
 </body>
 </html>
