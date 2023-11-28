@@ -8,22 +8,13 @@
 </head>
 <body>
 
-    <h5>Variable</h5>
-    <p id="1"></p>
-
-    <h5>Operation</h5>
-    <p id="2"></p>
-
-    <h5>DataTypes</h5>
-    <p id="3"></p>
-
-    <h5>Function</h5>
-    <p id="4"></p>
-
-    <h5>Object</h5>
-    <p id ="5"></p>
-
-    
+    <h4>Variable</h4><p id="1"></p>
+    <h4>Operation</h4><p id="2"></p>
+    <h4>DataTypes</h4><p id="3"></p>
+    <h4>Function</h4><p id="4"></p>
+    <h4>Object</h4><p id ="5"></p>
+    <h4>Event</h4><p id="5"></p>
+    <h4>String</h4><p id ="6"></p>
     
     <!-- Xử lý function -->
     <script>
@@ -81,6 +72,16 @@
     + ABCroom.numMale + "<br>" + ABCroom.numFemale + "<br>" + ABCroom.numIntern + "<br>" + ABCroom;
     </script>
     
+    <!-- Xử lý Event -->
+    <button onclick="window.print()">In web</button>
 
+    <!-- Xử lý String -->
+    <script>
+        let str1 = "Hello";
+        let str = ",";
+        const str2 = "Nha Trang"
+        let wri = str1 + " " + str + " " + str2;
+        document.getElementById("6").innerHTML = wri;
+    </script>
 </body>
 </html>
