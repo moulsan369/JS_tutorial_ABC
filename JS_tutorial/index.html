@@ -9,7 +9,7 @@
 <body>
 
     <h4>Variable</h4><p id="1"></p>
-    <h4>Operation</h4><p id="2"></p>
+    <h4>Operation</h4><p id="opration-2"></p>
     <h4>DataTypes</h4><p id="3"></p>
     <h4>Function</h4><p id="4"></p>
     <h4>Object</h4><p id ="5"></p>
@@ -41,10 +41,12 @@
 
     <!-- Xử lý Operation -->
     <script>
-        var a = 10, b = 11, c = 12, d = 14;
-        let sum = a + b;
-        let div = c / a;
-        document.getElementById("2").innerHTML = sum + '<br>' + div;
+        console.log('test')
+         var a = 10, b = 11, c = 12, d = 14;
+         let su = a + b;
+        let di = c / a;
+        let bnTest = document.querySelector("#opration-2")
+        bnTest.innerHTML = su + '<br>' + di;
     </script>
 
 
@@ -114,11 +116,11 @@
     </script>
     <!-- Xử lý Array method -->
     <script>
-        const a = ["I", "Miss", "My", "Home", "And", "All old friends"];
-        let a = a.length;
-        let a = a.pop();
-        a.push("All is just memory ");
-        document.getElementById("9").innerHTML = a;
+        const batt = ["I", "Miss", "My", "Home", "And", "All old friends"];
+        let batt_1 = batt.length;
+        let batt_2 = batt.pop();
+        batt.push("All is just memory ");
+        document.getElementById("9").innerHTML = batt_1;
     </script>
     <!-- Xử lý Array Sort -->
     <script>
@@ -129,9 +131,9 @@
     </script>
     <!-- Xử lý date -->
     <script>
-        const d = new Date();
-        d.getFullYear(2023);
-        document.getElementById("11").innerHTML=d;
+        const dy= new Date(); type
+        dy.getFullYear(2023);
+        document.getElementById("11").innerHTML=dy;
     </script>
     <!-- Xử lý Math -->
     <script>
