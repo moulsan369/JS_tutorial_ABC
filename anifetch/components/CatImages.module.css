@@ -1,0 +1,18 @@
+/* CatImages.module.css */
+.imageList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .imageItem {
+    margin: 5px;
+  }
+  
+  .image {
+    width: 200px; /* Đặt chiều rộng tùy thuộc vào kích thước bạn muốn */
+    height: 200px; /* Đặt chiều cao tùy thuộc vào kích thước bạn muốn */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo khi căn chỉnh kích thước */
+  }
+  
