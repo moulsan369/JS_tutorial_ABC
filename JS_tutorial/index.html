@@ -1,150 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js tutorial</title>
-    <script src="helloword.js"></script>
-</head>
-<body>
+    <script src="helloworld.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
 
-    <h4>Variable</h4><p id="1"></p>
-    <h4>Operation</h4><p id="opration-2"></p>
-    <h4>DataTypes</h4><p id="3"></p>
-    <h4>Function</h4><p id="4"></p>
-    <h4>Object</h4><p id ="5"></p>
-    <h4>Event</h4><p id="5"></p>
-    <h4>String</h4><p id ="6"></p>
-    <h4>String Method</h4><p id ="7"></p>
-    <h4>Array</h4><p id ="8"></p>
-    <h4>Array Method</h4><p id ="9"></p> 
-    <h4>Array Soft</h4><p id ="10"></p>
-    <h4>Date</h4><p id ="11"></p>
-    <h4>Math</h4><p id ="12"></p>
-    <h4>Compair</h4><p id ="13"></p>
-    
+      h4 {
+        margin-top: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h4>Variable</h4>
+    <p id="varOutput"></p>
+
+    <h4>Operation</h4>
+    <p id="operationOutput"></p>
+
+    <h4>Data Types</h4>
+    <p id="dataTypesOutput"></p>
+
+    <h4>Function</h4>
+    <p id="functionOutput"></p>
+
+    <h4>Object</h4>
+    <p id="objectOutput"></p>
+
+    <h4>Event</h4>
+    <button onclick="window.print()">Print Web</button>
+
+    <h4>String</h4>
+    <p id="stringOutput"></p>
+
+    <h4>String Method</h4>
+    <p id="stringMethodOutput"></p>
+
+    <h4>Array</h4>
+    <p id="arrayOutput"></p>
+
+    <h4>Array Method</h4>
+    <p id="arrayMethodOutput"></p>
+
+    <h4>Array Sort</h4>
+    <p id="arraySortOutput"></p>
+
+    <h4>Date</h4>
+    <p id="dateOutput"></p>
+
+    <h4>Math</h4>
+    <p id="mathOutput"></p>
+
+    <h4>Comparison</h4>
+    <p id="comparisonOutput"></p>
+
     <!-- Xử lý function -->
     <script>
-        function sum(a, b){
-            return a + b;
-        }        
+      function sum(a, b) {
+        return a + b;
+      }
     </script>
 
     <!-- Xử lý variable -->
     <script>
-        let name = 'Moul Sàn';
-        let age = 21;
-        let email = 'sanmoul@gmail.com';
-        let print = name + '<br>' + age + '<br>' + email;
-        document.getElementById("1").innerHTML = print;
+      let name = "Moul Sàn";
+      let age = 21;
+      let email = "sanmoul@gmail.com";
+      let print = name + "<br>" + age + "<br>" + email;
+      document.getElementById("varOutput").innerHTML = print;
     </script>
 
     <!-- Xử lý Operation -->
     <script>
-        console.log('test')
-         var a = 10, b = 11, c = 12, d = 14;
-         let su = a + b;
-        let di = c / a;
-        let bnTest = document.querySelector("#opration-2")
-        bnTest.innerHTML = su + '<br>' + di;
+      var a = 10,
+        b = 11,
+        c = 12,
+        d = 14;
+      let su = a + b;
+      let di = c / a;
+      document.getElementById("operationOutput").innerHTML = su + "<br>" + di;
     </script>
-
 
     <!-- Xử lý DataTypes -->
     <script>
-        const person = {
-            name: 'Mai Anh',
-            city: 'Di Linh',
-            age: 21
-        };
-        document.getElementById("3").innerHTML =
-        person.name + '<br>' + person.city + '<br>' + person.age;
+      const person = {
+        name: "Mai Anh",
+        city: "Di Linh",
+        age: 21,
+      };
+      document.getElementById("dataTypesOutput").innerHTML =
+        person.name + "<br>" + person.city + "<br>" + person.age;
     </script>
 
     <!-- Xử lý function call -->
     <script>
-        let count = sum(10, 5);
-        document.getElementById("4").innerHTML = count;
+      let count = sum(10, 5);
+      document.getElementById("functionOutput").innerHTML = count;
     </script>
-    
+
     <!-- Xử lý Object -->
     <script>
-        const ABCroom = {
-        numPeople : 20,
-        numMale : 15,
-        numFemale : 5,
-        numIntern : 4,
-        companyName : "ABC soft",
-    };
-    document.getElementById("5").innerHTML = 
-    ABCroom.companyName + "<br>" + ABCroom.numPeople + "<br>" 
-    + ABCroom.numMale + "<br>" + ABCroom.numFemale + "<br>" + ABCroom.numIntern + "<br>" + ABCroom;
+      const ABCroom = {
+        numPeople: 20,
+        numMale: 15,
+        numFemale: 5,
+        numIntern: 4,
+        companyName: "ABC soft",
+      };
+      document.getElementById("objectOutput").innerHTML =
+        ABCroom.companyName +
+        "<br>" +
+        ABCroom.numPeople +
+        "<br>" +
+        ABCroom.numMale +
+        "<br>" +
+        ABCroom.numFemale +
+        "<br>" +
+        ABCroom.numIntern;
     </script>
-    
-    <!-- Xử lý Event -->
-    <button onclick="window.print()">In web</button>
 
     <!-- Xử lý String -->
     <script>
-        let str1 = "Hello";
-        let str = ",";
-        const str2 = "Nha Trang"
-        let wri = str1 + " " + str + " " + str2;
-        document.getElementById("6").innerHTML = wri;
+      let str1 = "Hello";
+      let str = ",";
+      const str2 = "Nha Trang";
+      let wri = str1 + " " + str + " " + str2;
+      document.getElementById("stringOutput").innerHTML = wri;
     </script>
 
     <!-- Xử lý String Method -->
     <script>
-        let txt = "Moul Sàn";
-        let rep = txt.replace("Moul","moul");
-        let up = txt.toUpperCase();
-        let numtxt = txt.length;
-        document.getElementById("7").innerHTML=
+      let txt = "Moul Sàn";
+      let rep = txt.replace("Moul", "moul");
+      let up = txt.toUpperCase();
+      let numtxt = txt.length;
+      document.getElementById("stringMethodOutput").innerHTML =
         txt + "<br>" + rep + "<br>" + up + "<br>" + numtxt;
     </script>
+
     <!-- Xử lý Array -->
     <script>
-        const arr =["You", "Me","Our Children", "This contry", "This World"];
-        let num = arr.length;
+      const arr = ["You", "Me", "Our Children", "This country", "This World"];
+      let num = arr.length;
 
-        let tx = "<ul>";
-        for (let i = 0; i <num; i++){
-            tx += "<li>" + arr[i] + "</li>";
-        }
-        tx += "</ul>";
-        document.getElementById("8").innerHTML = tx;
+      let tx = "<ul>";
+      for (let i = 0; i < num; i++) {
+        tx += "<li>" + arr[i] + "</li>";
+      }
+      tx += "</ul>";
+      document.getElementById("arrayOutput").innerHTML = tx;
     </script>
+
     <!-- Xử lý Array method -->
     <script>
-        const batt = ["I", "Miss", "My", "Home", "And", "All old friends"];
-        let batt_1 = batt.length;
-        let batt_2 = batt.pop();
-        batt.push("All is just memory ");
-        document.getElementById("9").innerHTML = batt_1;
+      const batt = ["I", "Miss", "My", "Home", "And", "All old friends"];
+      let batt_1 = batt.length;
+      let batt_2 = batt.pop();
+      batt.push("All is just a memory");
+      document.getElementById("arrayMethodOutput").innerHTML = batt_1;
     </script>
+
     <!-- Xử lý Array Sort -->
     <script>
-        const ar =["a","b","c","d"];
-        ar.sort();
-        ar.reverse();
-        document.getElementById("10").innerHTML = ar;
+      const ar = ["a", "b", "c", "d"];
+      ar.sort();
+      ar.reverse();
+      document.getElementById("arraySortOutput").innerHTML = ar;
     </script>
+
     <!-- Xử lý date -->
     <script>
-        const dy= new Date(); type
-        dy.getFullYear(2023);
-        document.getElementById("11").innerHTML=dy;
+      const dy = new Date();
+      dy.setFullYear(2023);
+      document.getElementById("dateOutput").innerHTML = dy;
     </script>
+
     <!-- Xử lý Math -->
     <script>
-        let b_ = Math.random(0,1);
-        document.getElementById("12").innerHTML =b_;
+      let b_ = Math.random();
+      document.getElementById("mathOutput").innerHTML = b_;
     </script>
+
     <!-- Xử lý Compairs -->
-     <script>
-        let woman = 18;
-        let confirm = (woman >= 18) ? "Can Marry" : "Can't Marry";
-        document.getElementById("13").innerHTML = confirm;
-     </script>
-</body>
+    <script>
+      let woman = 18;
+      let confirm = woman >= 18 ? "Can Marry" : "Can't Marry";
+      document.getElementById("comparisonOutput").innerHTML = confirm;
+    </script>
+  </body>
 </html>

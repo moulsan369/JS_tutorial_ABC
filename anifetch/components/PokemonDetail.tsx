@@ -1,7 +1,7 @@
 // CatImages.tsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import styles from './CatImages.module.css'; // Tạo một file CSS module để quản lý style
+import styles from './CatImages.module.css'; 
 
 interface CatImage {
   id: string;
