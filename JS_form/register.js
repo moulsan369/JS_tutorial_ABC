@@ -2,16 +2,17 @@ const userName = document.getElementById('username');
 const userEmail = document.getElementById('email');
 const userPhone = document.getElementById('phone');
 
-const regiterBtn= document.getElementById('register-btn');
-const inputRegis= document.querySelectorAll('.input-reg');
-
+const regiterBtn = document.getElementById('register-btn');
+const inputRegis = document.querySelectorAll('.input-reg');
 
 regiterBtn.addEventListener('click', function () {
     let isValid = checkValidate();
 
-    if (isValid == true) {
+    if (isValid === true) {
         alert('Gửi đăng ký thành công');
-    } return false;
+    } else {
+        alert('Vui lòng điền đầy đủ thông tin');
+    }
 });
 
 function checkValidate() {
@@ -19,21 +20,20 @@ function checkValidate() {
     let emailValue = userEmail.value;
     let phoneValue = userPhone.value;
 
-    if (usernameValue == ''){
-        alert("Nhận tên");
+    if (usernameValue === '') {
+        alert("Nhập tên");
         return false;
     }
-    
 
-    if (emailValue == ''){
-        alert("Nhận email");
+    if (emailValue === '') {
+        alert("Nhập email");
         return false;
     }
-    
 
-    if (phoneValue == ''){
+    if (phoneValue === '') {
         alert("Nhập Phone");
-        return false;    
+        return false;
     }
-    
+
+    return true;
 }
